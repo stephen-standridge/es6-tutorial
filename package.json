@@ -1,0 +1,37 @@
+{
+  "name": "es6-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephen-standridge/es6-tutorial.git"
+  },
+  "author": "Stephen Standridge <Stephen@formisfunction.io> (www.formisfunction.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephen-standridge/es6-tutorial/issues"
+  },
+  "homepage": "https://github.com/stephen-standridge/es6-tutorial",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-watch": "^4.3.5",
+    "jquery": "^2.1.4",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jquery": "^0.1.0",
+    "karma-mocha": "^0.2.0",
+    "karma-nyan-reporter": "^0.2.2",
+    "mocha": "^2.2.5",
+    "node-notifier": "^4.2.3",
+    "require-dir": "^0.3.0",
+    "yargs": "^3.26.0"
+  }
+}
