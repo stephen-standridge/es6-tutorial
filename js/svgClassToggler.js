@@ -1,14 +1,13 @@
-var ToggleDebouncer = function( trigger, target, klass ){
-	var triggerClass = trigger || 'js-toggle-trigger';
-	var targetClass = target || 'js-toggle-target';
+console.log('test')
+var SVGClassToggler = function( triggerClass, targetClass ){
+	var triggerClass = triggerClass || 'js-toggle-trigger';
+	var targetClass = targetClass || 'js-toggle-target';
 	this.isActive = false;
 	this.trigger = $(triggerClass);
 	this.target = $(targetClass);
-	this.klass = klass || 'active';
-	this.timeout;
-	this.bindClicks();
+	this.klass = 'active';
 };
-ToggleDebouncer.prototype = {
+SVGClassToggler.prototype = {
 	bindClicks: function(){
 		var self = this;
 		$(this.trigger).click(function(e){
@@ -18,41 +17,20 @@ ToggleDebouncer.prototype = {
 	},
 	addClassSVG: function(){
 		var $el = $(this.target);		
-    if($el.length > 1){
+    if($el.length > 0){
       this.addMultipleClasses($el);
     } else {
       this.addSingularClass($el);
     }
-    this.isActive = true;    
-		this.debounce( this.checkIfShouldDeactivate, 2000, this);
   },  
 	removeClassSVG: function(){
 		var $el = $(this.target);
-    if($el.length > 1){
+    if($el.length > 0){
       this.removeMultipleClasses($el);
     } else {
       this.removeSingularClass($el);
     }
     this.isActive = false;
-	},
-
-	checkIfShouldDeactivate: function(id){
-		if(this.timer === id){
-			this.removeClassSVG();
-		}	
-	},
-	debounce: function(func, wait, context) {
-		var timeout;
-		var debounced = function() {
-			var later = function() {
-				func.apply(context, [timeout]);
-				timeout = null;				
-			};
-			clearTimeout(timeout);
-			timeout = setTimeout(later, wait);
-		}();
-		this.timer = timeout;
-		return debounced;
 	},
 	toggleClass: function(){
 		if( this.isActive ){
@@ -70,7 +48,7 @@ ToggleDebouncer.prototype = {
     var tempClass, newClass, self=this;
     $(elems).each(function(){
     	self.removeSingularClass( $(this) );
-    })
+    });
   },
   addSingularClass: function(elem){
     var tempClass = $(elem).attr('class');
@@ -81,5 +59,5 @@ ToggleDebouncer.prototype = {
     $( elems ).each( function(){
     	self.addSingularClass( $(this) );
     });
-  }
+  }	
 };

@@ -5,6 +5,8 @@ var gulp   = require( 'gulp' ),
 
 gulp.task( 'default', function() {
 		gulp.start('js')
+		gulp.start('es6')
     gulp.watch('./js/*.js', ['js']);
+    gulp.watch('./es6/*.js', ['es6']);
     gulp.start( 'karma' );	    
 });

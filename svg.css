@@ -1,0 +1,422 @@
+.logo-line {
+  fill: none;
+  stroke: #D4D9DE;
+  stroke-miterlimit: 10;
+}
+
+.logo-o {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #F0783C;
+}
+
+.logo-text {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #3A3B38;
+}
+
+.logo__do-not--box {
+  fill: none;
+  stroke: #D4D9DE;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.logo__do-not--circle {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #F16363;
+}
+
+.logo__do-not--x {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.logo-o--green {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #618A4E;
+}
+
+.logo-text--blue {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #5F91CC;
+}
+
+.logo-o--hollow {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: none;
+  stroke: #64625E;
+  stroke-miterlimit: 10;
+}
+
+.logo-text--alt {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #64625E;
+}
+
+.logo-o--outlined {
+  fill: #EF783B;
+  stroke: #010101;
+  stroke-miterlimit: 10;
+}
+
+.logo-text--outlined {
+  fill: #64635E;
+  stroke: #010101;
+  stroke-miterlimit: 10;
+}
+
+.logo-o__center--pressed {
+  clip-path: url(#XMLID_2_);
+  fill: #F0783C;
+}
+
+.clip-mask__1 {
+  clip-path: url(#XMLID_3_);
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #EE3424;
+}
+
+.logo-o__outside--pressed {
+  clip-path: url(#XMLID_4_);
+  fill: #F0783C;
+}
+
+.clip-mask__2 {
+  clip-path: url(#XMLID_5_);
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #EE3424;
+}
+
+.logo-text--pressed {
+  clip-path: url(#XMLID_6_);
+  fill: #64625E;
+}
+
+.clip-mask__3 {
+  clip-path: url(#XMLID_7_);
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #EE3424;
+}
+
+.logo-background--black {
+  fill: #2E3134;
+}
+
+.logo-white {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #FFFFFF;
+}
+
+.logo-background--white {
+  fill: #FFFFFF;
+  stroke: #EFEEEE;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.logo-black {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #2E3134;
+}
+
+.logo-orange {
+  fill: #F1783C;
+}
+
+.logo-white {
+  fill: #FFFFFF;
+}
+
+.logo-persistent {
+  display: block;
+}
+
+.logo-persistent.active {
+  display: none;
+}
+
+.anim-o {
+  display: none;
+}
+
+.anim-o.active {
+  display: block;
+  transform-origin: center;
+  animation-name: o;
+  animation-duration: 2s;
+  -webkit-animation-name: o;
+  -webkit-animation-duration: 2s;
+}
+
+.anim-orange {
+  display: none;
+}
+
+.anim-orange.active {
+  display: block;
+  transform-origin: center;
+  animation-name: orange;
+  animation-duration: 2s;
+  -webkit-animation-name: orange;
+  -webkit-animation-duration: 2s;
+}
+
+.anim-omada-o {
+  display: none;
+}
+
+.anim-omada-o.active {
+  display: block;
+  transform-origin: center;
+  animation-name: omada-o;
+  animation-duration: 2s;
+  -webkit-animation-name: omada-o;
+  -webkit-animation-duration: 2s;
+}
+
+.anim-omada-m {
+  display: none;
+}
+
+.anim-omada-m.active {
+  display: block;
+  transform-origin: center;
+  animation-name: omada-m;
+  animation-duration: 2s;
+  -webkit-animation-name: omada-m;
+  -webkit-animation-duration: 2s;
+}
+
+.anim-omada-a1 {
+  display: none;
+}
+
+.anim-omada-a1.active {
+  display: block;
+  transform-origin: center;
+  animation-name: omada-a1;
+  animation-duration: 2s;
+  -webkit-animation-name: omada-a1;
+  -webkit-animation-duration: 2s;
+}
+
+.anim-omada-a2 {
+  display: none;
+}
+
+.anim-omada-a2.active {
+  display: block;
+  transform-origin: center;
+  animation-name: omada-a2;
+  animation-duration: 2s;
+  -webkit-animation-name: omada-a2;
+  -webkit-animation-duration: 2s;
+}
+
+.anim-omada-d {
+  display: none;
+}
+
+.anim-omada-d.active {
+  display: block;
+  transform-origin: center;
+  animation-name: omada-d;
+  animation-duration: 2s;
+  -webkit-animation-name: omada-d;
+  -webkit-animation-duration: 2s;
+}
+
+@keyframes orange {
+  0% {
+    opacity: 0;
+    transform: scale(0.225, 0.225);
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.225, 0.225);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes orange {
+  0% {
+    opacity: 0;
+    transform: scale(0.225, 0.225);
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.225, 0.225);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes omada-o {
+  0% {
+    opacity: 0;
+    transform: translate(-63px, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  69% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes o {
+  0% {
+    transform: translate(50px, 0) scale(0.63, 0.63);
+  }
+  70% {
+    transform: translate(0, 0) scale(0.63, 0.63);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes o {
+  0% {
+    transform: translate(50px, 0) scale(0.63, 0.63);
+  }
+  70% {
+    transform: translate(0, 0) scale(0.63, 0.63);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes omada-o {
+  0% {
+    opacity: 0;
+    transform: translate(-63px, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  69% {
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes omada-m {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  69% {
+    opacity: 1;
+  }
+}
+
+@keyframes omada-m {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  69% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes omada-a1 {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+}
+
+@keyframes omada-a1 {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes omada-d {
+  0% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 1;
+  }
+}
+
+@keyframes omada-d {
+  0% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes omada-a2 {
+  0% {
+    opacity: 0;
+  }
+  89% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+}
+
+@keyframes omada-a2 {
+  0% {
+    opacity: 0;
+  }
+  89% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+}

@@ -1,12 +1,14 @@
 'use strict';
 var gulp       = require( 'gulp' ),
+    babel      = require( 'gulp-babel' ),
     concat     = require( 'gulp-concat' ),
     watch      = require( 'gulp-watch' );
 
 
 
-gulp.task( 'js', function() {
-  return gulp.src('./js/*.js')
-    .pipe( concat( 'main_js.js' ) )
+gulp.task( 'es6', function() {
+  return gulp.src('./es6/*.js')
+    .pipe( babel() )
+    .pipe( concat( 'main_es6.js' ) )
     .pipe( gulp.dest( './dist/' ) );
 });
