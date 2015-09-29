@@ -1,5 +1,5 @@
 class SVGClassToggler {
-	constructor( trigger = 'js-toggle-trigger', target  = 'js-toggle-target'){
+	constructor( trigger = '.js-toggle-trigger', target  = '.js-toggle-target'){
 		this.isActive = false;
 		this.trigger = $(trigger);
 		this.target = $(target);

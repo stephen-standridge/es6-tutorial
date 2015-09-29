@@ -1,33 +1,31 @@
 class ToggleDebouncer extends SVGClassToggler {
   constructor( toggleClass, targetClass ){
     super( toggleClass, targetClass );
-    this.timer;
+    this.timerId;
   }
   addClassSVG(){
     super.addClassSVG();
     this.isActive = true;
-    this.checkIfActiveIn(2000).then( (id)=> this.checkIfShouldDeactivate(id) );
+    this.wait(2000).then( (id)=> this.checkIfShouldDeactivate(id) );
   }
   removeClassSVG(){
     super.removeClassSVG();
     this.isActive = false;
   }
   checkIfShouldDeactivate(id){
-    if(this.timer === id){
+    if(this.timerId === id){
       this.removeClassSVG();
-      this.timer = undefined;
+      this.timerId = undefined;
     } 
   }
-  checkIfActiveIn( ms ){
+  wait( ms ){
     var newTimer,
-    promise = new Promise(
-      function( resolve ) {
-        newTimer = setTimeout( function(){
-          resolve( newTimer );              
-        }, ms );
-      }
-    );
-    this.timer = newTimer;
+    promise = new Promise( function( resolve ) {
+      newTimer = setTimeout( function(){
+        resolve( newTimer );              
+      }, ms );
+    } );
+    this.timerId = newTimer;
     return promise;
   }
 }

@@ -24,7 +24,7 @@ ToggleDebouncer.prototype = {
       this.addSingularClass($el);
     }
     this.isActive = true;    
-		this.debounce( this.checkIfShouldDeactivate, 2000, this);
+		this.debounce( this.removeClassSVG, 2000, this);
   },  
 	removeClassSVG: function(){
 		var $el = $(this.target);
@@ -36,23 +36,15 @@ ToggleDebouncer.prototype = {
     this.isActive = false;
 	},
 
-	checkIfShouldDeactivate: function(id){
-		if(this.timer === id){
-			this.removeClassSVG();
-		}	
-	},
 	debounce: function(func, wait, context) {
-		var timeout;
 		var debounced = function() {
 			var later = function() {
-				func.apply(context, [timeout]);
-				timeout = null;				
+				func.apply(context);
+				this.timerId = undefined;				
 			};
-			clearTimeout(timeout);
-			timeout = setTimeout(later, wait);
+			clearTimeout(this.timerId);
+			this.timerId = setTimeout(later, wait);
 		}();
-		this.timer = timeout;
-		return debounced;
 	},
 	toggleClass: function(){
 		if( this.isActive ){
