@@ -1,4 +1,3 @@
-console.log('test')
 var SVGClassToggler = function( triggerClass, targetClass ){
 	var triggerClass = triggerClass || 'js-toggle-trigger';
 	var targetClass = targetClass || 'js-toggle-target';
@@ -6,6 +5,7 @@ var SVGClassToggler = function( triggerClass, targetClass ){
 	this.trigger = $(triggerClass);
 	this.target = $(targetClass);
 	this.klass = 'active';
+  this.bindClicks();  
 };
 SVGClassToggler.prototype = {
 	bindClicks: function(){

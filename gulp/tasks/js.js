@@ -5,8 +5,11 @@ var gulp       = require( 'gulp' ),
 
 
 
-gulp.task( 'js', function() {
-  return gulp.src('./js/*.js')
-    .pipe( concat( 'main_js.js' ) )
-    .pipe( gulp.dest( './dist/' ) );
+gulp.task( 'test-js', function() {
+  gulp.start( 'karma-js' );	
 });
+gulp.task( 'process-js', function(){
+  return gulp.src('./bad_js_classes/*.js')
+    .pipe( concat( 'bad_js.js' ) )
+    .pipe( gulp.dest( './dist/' ) );
+})

@@ -8,22 +8,27 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '../../',
     'plugins' : [
-        'jquery',
         'karma-jquery',
         'karma-mocha',
+        'karma-sinon-chai',
         'karma-nyan-reporter',
+        'karma-chai-jquery',
         'karma-chrome-launcher',
+        'karma-fixture',
+        'karma-html2js-preprocessor'
     ],
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: [ 'mocha', 'jquery-1.8.3' ],
+    frameworks: [ 'mocha', 'chai-jquery', 'jquery-1.8.3', 'sinon-chai', 'fixture'],
 
     // list of files / patterns to load in the browser, grabs the concatenated js and fixture files by default.
     files: [ 
-      env.karma.concat,
-      env.karma.tests,
+      'spec/fixtures/fixture.html',
+      'spec/toggle_debouncer.js'
     ],
-
+    preprocessors: {
+      '**/*.html'   : ['html2js']
+    },
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter

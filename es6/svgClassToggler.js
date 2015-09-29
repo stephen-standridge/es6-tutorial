@@ -1,10 +1,10 @@
-console.log('test')
 class SVGClassToggler {
 	constructor( trigger = 'js-toggle-trigger', target  = 'js-toggle-target'){
 		this.isActive = false;
 		this.trigger = $(trigger);
 		this.target = $(target);
 		this.klass = 'active';
+    this.bindClicks();    
   }
 	bindClicks(){
 		$(this.trigger).click( (e) => {

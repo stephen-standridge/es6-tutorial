@@ -12,7 +12,7 @@ function runKarma( options, done ) {
 
     Object.keys( options ).forEach( function( key ) {
     	if( key === 'files' ){
-    		config[ key ].push( options[ key ] );
+    		config[ key ].unshift( options[ key ] );
     	}else{
 	      config[ key ] = options[ key ];    		
     	}
@@ -23,14 +23,17 @@ function runKarma( options, done ) {
 }
 
 function processFile( file ){
-	var added = file || '*';
-			added += '.js';
-	var suite = env.tests + added;
+	var added = file + '_' || '';
+	var suite = 'dist/main' + added + '.js';
+
 	return suite;
 }
 
-gulp.task( 'karma', function(){
-	runKarma({ files: processFile( args.file ) }, sysNotifier );
+gulp.task( 'karma-js', function(){
+	runKarma({ files: 'dist/main.js'}, sysNotifier );
+});
+gulp.task( 'karma-es6', function(){
+	runKarma({ files: 'dist/main_es6.js' }, sysNotifier );
 });
 
 module.exports = runKarma;

@@ -4,8 +4,6 @@ var _createClass = (function () { function defineProperties(target, props) { for
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-console.log('test');
-
 var SVGClassToggler = (function () {
   function SVGClassToggler() {
     var trigger = arguments.length <= 0 || arguments[0] === undefined ? 'js-toggle-trigger' : arguments[0];
@@ -17,6 +15,7 @@ var SVGClassToggler = (function () {
     this.trigger = $(trigger);
     this.target = $(target);
     this.klass = 'active';
+    this.bindClicks();
   }
 
   _createClass(SVGClassToggler, [{
@@ -109,7 +108,6 @@ var ToggleDebouncer = (function (_SVGClassToggler) {
 
     _get(Object.getPrototypeOf(ToggleDebouncer.prototype), "constructor", this).call(this, toggleClass, targetClass);
     this.timer;
-    this.bindClicks();
   }
 
   _createClass(ToggleDebouncer, [{
@@ -134,6 +132,7 @@ var ToggleDebouncer = (function (_SVGClassToggler) {
     value: function checkIfShouldDeactivate(id) {
       if (this.timer === id) {
         this.removeClassSVG();
+        this.timer = undefined;
       }
     }
   }, {

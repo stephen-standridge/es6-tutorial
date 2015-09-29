@@ -1,9 +1,7 @@
 var ToggleDebouncer = function( trigger, target, klass ){
 	SVGClassToggler.apply(this ,[trigger, target, klass]);
 	this.timeout;
-	this.bindClicks();
 	this.addClassSVG= function(){
-		console.log('yes')
 	  this.isActive = true;    
 		this.debounce( this.checkIfShouldDeactivate, 2000, this);	  		
 		var backup = this.addClassSVG;
@@ -13,7 +11,6 @@ var ToggleDebouncer = function( trigger, target, klass ){
 	  this.addClassSVG = backup;//restore instance property	  
 	};
 	this.removeClassSVG= function(){
-		console.log('deactivated')
 		var backup = this.removeClassSVG;
 	  delete this.removeClassSVG;//delete instance property
 	  this.removeClassSVG();//call again
@@ -26,7 +23,7 @@ var ToggleDebouncer = function( trigger, target, klass ){
 			this.removeClassSVG();
 		}	
 	};
-	this.debounce= function(func, wait, context) {
+	this.debounce = function(func, wait, context) {
 		var timeout;
 		var debounced = function() {
 			var later = function() {

@@ -2,12 +2,11 @@ class ToggleDebouncer extends SVGClassToggler {
   constructor( toggleClass, targetClass ){
     super( toggleClass, targetClass );
     this.timer;
-    this.bindClicks();
   }
   addClassSVG(){
     super.addClassSVG();
     this.isActive = true;
-    this.checkIfActiveIn(2000).then( (id)=> this.checkIfShouldDeactivate(id) );    
+    this.checkIfActiveIn(2000).then( (id)=> this.checkIfShouldDeactivate(id) );
   }
   removeClassSVG(){
     super.removeClassSVG();
@@ -16,6 +15,7 @@ class ToggleDebouncer extends SVGClassToggler {
   checkIfShouldDeactivate(id){
     if(this.timer === id){
       this.removeClassSVG();
+      this.timer = undefined;
     } 
   }
   checkIfActiveIn( ms ){
