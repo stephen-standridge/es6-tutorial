@@ -8,8 +8,8 @@ var gulp       = require( 'gulp' ),
 gulp.task( 'test-js', function() {
   gulp.start( 'karma-js' );	
 });
-gulp.task( 'process-js', function(){
-  return gulp.src('./bad_js_classes/*.js')
+gulp.task( 'bad-js', function(){
+  return gulp.src('./examples/bad_js_classes/*.js')
     .pipe( concat( 'bad_js.js' ) )
     .pipe( gulp.dest( './dist/' ) );
 })

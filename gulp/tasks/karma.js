@@ -18,7 +18,7 @@ function runKarma( options, done ) {
     	}
     });
 
-  var server = new karma.Server( config, done );	
+  var server = new karma.Server( config, function(){return} );	
   server.start();
 }
 

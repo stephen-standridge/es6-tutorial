@@ -1,6 +1,6 @@
 var ToggleDebouncer = function( trigger, target, klass ){
-	var triggerClass = trigger || 'js-toggle-trigger';
-	var targetClass = target || 'js-toggle-target';
+	var triggerClass = trigger || '.js-toggle-trigger';
+	var targetClass = target || '.js-toggle-target';
 	this.isActive = false;
 	this.trigger = $(triggerClass);
 	this.target = $(targetClass);
