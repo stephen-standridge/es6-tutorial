@@ -16,10 +16,10 @@ Once you do have node, clone the repository and from the repository root run ***
 This project has two main command-line tasks you can run. 
 
 ```
-gulp /* starts the build/watch tasks for any files in the es6 folder */
+npm start /* starts the build/watch tasks for any files in the es6 folder */
 		 /* the build/watch tasks compile the files from the es6 folder into the dist/main_es6.js file */
 		 /* also starts the test runner with the compiled file */
-gulp test-js /* runs the tests with the main.js (original) file */
+npm test /* runs the tests with the main.js (original) file */
 
 ```
 
